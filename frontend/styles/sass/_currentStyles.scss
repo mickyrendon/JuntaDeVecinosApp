@@ -1,6 +1,49 @@
-@use "./components";
+@use "./colors" as colors;
+@use "./components" as components;
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+body{
+    height: 100vh;
+}
+main{
+    height: 100%;
+}
+// aside
+.menu-ctr{
+    max-width: 30vw;
+    height: 100%;
+}
+.menu-list {
+    padding: 0.8rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    background: colors.$background;
+    
+    & li{
+        @include components.cards();
+        // desactive card colors and text
+        background-color: colors.$deselectedCard;
+        color: colors.$deselectedText;
+    }
+    & img{
+        @include components.cardsIcons();
+    // desactive card icons
+        fill: red;
+    }
+}
+// header and footer
+.nav-header{
+    @include components.headerFooter();
+}
+footer{
+    @include components.headerFooter();
 }

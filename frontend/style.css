@@ -1,18 +1,67 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @use "sass/components";
- *   | ^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   styles\sass\_currentStyles.scss 1:1  @use
- *   style.scss 2:1                       root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use \"sass/components\";\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   styles\\sass\\_currentStyles.scss 1:1  @use\a   style.scss 2:1                       root stylesheet";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
 }
+
+body {
+  height: 100vh;
+}
+
+main {
+  height: 100%;
+}
+
+.menu-ctr {
+  max-width: 30vw;
+  height: 100%;
+}
+
+.menu-list {
+  padding: 0.8rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  background: #fcfdfe;
+}
+.menu-list li {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 0.7rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background-color: #BBCDFA;
+  color: #293247;
+}
+.menu-list img {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: red;
+}
+
+.nav-header {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: #344F96;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+footer {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: #344F96;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
