@@ -1,10 +1,16 @@
 @use "./colors" as colors;
+// flex center elements
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 // cards
 @mixin cards {
     width: 100%;
     height: 6rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     border-radius: 0.7rem;
     box-shadow: 0px 4px 4px 0px rgba($color: #000000, $alpha: 0.25);
@@ -14,16 +20,31 @@
     width: 2.5rem;
     height: 2.5rem;
 }
+@mixin cardsTitle{
+    width: 50%;
+}
+@mixin selectedCard{
+    background-color: colors.$selectedCard;
+    color: colors.$selectedText;
+}
 // nav & footer
 @mixin headerFooter{
     padding: 0.5rem;
     width: 100%;
+    min-height: 1.5rem;
     background-color: colors.$navs;
     display: flex;
     justify-content: center;
-    align-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
 }
 // logo
 @mixin logo{
-    // width: ;
+    padding: 0.2rem;
+    // width:1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    left: 1rem;
+    border-radius: 20%;
 }
+// 

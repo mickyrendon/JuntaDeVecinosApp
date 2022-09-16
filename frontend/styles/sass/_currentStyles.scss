@@ -11,21 +11,21 @@ body{
     height: 100vh;
 }
 main{
-    height: 100%;
+    height: 95%;
 }
 // aside
 .menu-ctr{
+    padding: 1.5rem;
     max-width: 30vw;
     height: 100%;
+    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.25);
 }
 .menu-list {
-    padding: 0.8rem;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-content: space-evenly;
     background: colors.$background;
     
     & li{
@@ -34,16 +34,57 @@ main{
         background-color: colors.$deselectedCard;
         color: colors.$deselectedText;
     }
+    & .selected{
+        @include components.selectedCard();
+    }
+    & li:hover{
+        animation: myAnim 400ms ease 0s 1 normal forwards;
+    }
+    & .card-title{
+        @include components.cardsTitle();
+    }
     & img{
         @include components.cardsIcons();
     // desactive card icons
         fill: red;
     }
 }
+// selected card
+// .selected{
+//     @include components.selectedCard();
+// }
 // header and footer
 .nav-header{
     @include components.headerFooter();
+    box-shadow: 0px 4px 8px rgba(52, 79, 150, 0.51);
+    & h1{
+        color: colors.$selectedText;
+        text-align: center
+    }
+    & .logo-ctr{
+        @include components.logo();
+        @include components.center();
+        background-color: colors.$bckLogo;
+        & img{
+            color:colors.$selectedText;
+
+        }
+
+    }
 }
 footer{
     @include components.headerFooter();
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0px -4px 8px rgba(52, 79, 150, 0.51);
+}
+
+@keyframes myAnim {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		box-shadow: 0 12px 20px -20px rgba(0, 0, 0, 0.35);
+	}
 }
