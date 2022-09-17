@@ -27,17 +27,18 @@ main{
     flex-direction: column;
     justify-content: space-evenly;
     background: colors.$background;
+    list-style: none;
     
-    & li{
+    & button{
         @include components.cards();
         // desactive card colors and text
         background-color: colors.$deselectedCard;
         color: colors.$deselectedText;
     }
-    & .selected{
+    & button.selected{
         @include components.selectedCard();
     }
-    & li:hover{
+    & button:hover{
         animation: myAnim 400ms ease 0s 1 normal forwards;
     }
     & .card-title{

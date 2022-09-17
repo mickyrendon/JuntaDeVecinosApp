@@ -28,8 +28,9 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   background: #fcfdfe;
+  list-style: none;
 }
-.menu-list li {
+.menu-list button {
   width: 100%;
   height: 6rem;
   display: flex;
@@ -40,11 +41,11 @@ main {
   background-color: #BBCDFA;
   color: #293247;
 }
-.menu-list .selected {
+.menu-list button.selected {
   background-color: #3C65CC;
   color: #DAE4FD;
 }
-.menu-list li:hover {
+.menu-list button:hover {
   animation: myAnim 400ms ease 0s 1 normal forwards;
 }
 .menu-list .card-title {
