@@ -8,17 +8,20 @@
 
 body {
   height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 main {
-  height: 95%;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
 
 .menu-ctr {
   padding: 1.5rem;
-  max-width: 30vw;
   height: 100%;
-  box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0.5px 0px 6px rgba(0, 0, 0, 0.25);
 }
 
 .menu-list {
@@ -32,10 +35,12 @@ main {
 }
 .menu-list button {
   width: 100%;
+  min-width: 15rem;
   height: 6rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border: none;
   border-radius: 0.7rem;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background-color: #BBCDFA;
@@ -50,6 +55,7 @@ main {
 }
 .menu-list .card-title {
   width: 50%;
+  text-align: start;
 }
 .menu-list img {
   width: 2.5rem;
@@ -66,24 +72,24 @@ main {
   justify-content: center;
   flex-direction: row-reverse;
   align-items: center;
-  box-shadow: 0px 4px 8px rgba(52, 79, 150, 0.51);
+  box-shadow: 0px 0.5px 6px rgba(52, 79, 150, 0.51);
 }
 .nav-header h1 {
   color: #DAE4FD;
   text-align: center;
 }
 .nav-header .logo-ctr {
-  padding: 0.2rem;
-  height: 1.5rem;
-  position: absolute;
-  left: 1rem;
-  border-radius: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #668EF6;
 }
 .nav-header .logo-ctr img {
+  padding: 0.2rem;
+  height: 1.8rem;
+  position: absolute;
+  left: 1rem;
+  border-radius: 50%;
   color: #DAE4FD;
 }
 
@@ -98,7 +104,7 @@ footer {
   align-items: center;
   position: absolute;
   bottom: 0;
-  box-shadow: 0px -4px 8px rgba(52, 79, 150, 0.51);
+  box-shadow: 0px -0.5px 6px rgba(52, 79, 150, 0.51);
 }
 
 @keyframes myAnim {
