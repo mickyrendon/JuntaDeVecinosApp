@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
+    text-decoration: none;
 }
 body{
     height: 100vh;
@@ -76,6 +77,15 @@ main{
 
         }
 
+    }
+}
+section{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+    & figure{
+        @include components.cardsIcons;
     }
 }
 footer{

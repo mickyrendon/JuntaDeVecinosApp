@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
+  text-decoration: none;
 }
 
 body {
@@ -91,6 +92,16 @@ main {
   left: 1rem;
   border-radius: 50%;
   color: #DAE4FD;
+}
+
+section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+section figure {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 footer {
